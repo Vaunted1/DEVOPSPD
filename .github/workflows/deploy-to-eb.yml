@@ -27,7 +27,7 @@ jobs:
       - name: Create new ElasticBeanstalk Application Version
         run: |
           aws elasticbeanstalk create-application-version \
-          --application-name Devops-TP \
+          --application-name "Devops-TP" \
           --source-bundle S3Bucket="devopskfc",S3Key="deploy_package.zip" \
           --version-label "ver-${{ github.sha }}" \
           --description "commit-sha-${{ github.sha }}"
